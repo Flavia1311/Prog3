@@ -2,8 +2,6 @@ package ej6;
 
 import java.util.Iterator;
 
-import ProgramacionIII.tp1.MyIterator;
-
 public class MySimpleLinkedList implements Iterable<Integer> {
 
 	private Node first;
@@ -124,8 +122,8 @@ public class MySimpleLinkedList implements Iterable<Integer> {
 		}
 	}
 
-	public Iterator<Integer> iterator() {
-		return new MyIterator(this.first);
+	public IteradorLista iterator() {
+		return new IteradorLista(first);
 	}
 
 }

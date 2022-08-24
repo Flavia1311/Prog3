@@ -2,8 +2,12 @@ package ej6;
 
 import java.util.Iterator;
 
-public class IteradorLista implements Iterator {
+public class IteradorLista implements Iterator<Integer> {
 	private Node cursor;
+	
+	public IteradorLista (Node first) {
+		cursor=first;
+	}
 
 	@Override
 	public boolean hasNext() {
