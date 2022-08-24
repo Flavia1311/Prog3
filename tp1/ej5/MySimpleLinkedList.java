@@ -1,9 +1,4 @@
-package ej3;
-
-import java.util.Iterator;
-
-import ProgramacionIII.tp1.MyIterator;
-import ProgramacionIII.tp1.Node;
+package ej5;
 
 public class MySimpleLinkedList implements Iterable<Integer> {
 
@@ -96,8 +91,24 @@ public class MySimpleLinkedList implements Iterable<Integer> {
 		return list;
 	}
 
-	public Iterator<Integer> iterator() {
-		return new MyIterator(this.first);
+	public int indexOf(Integer info) {
+
+		Node tmp = new Node();
+		tmp = first;
+		int index = 0;
+		while (tmp != null) {
+
+			if (tmp.getInfo().equals(info))
+				return index;
+
+			else {
+				index++;
+				tmp = tmp.getNext();
+
+			}
+
+		}
+		return -1;
 	}
 
 	public void printList() {
@@ -107,6 +118,12 @@ public class MySimpleLinkedList implements Iterable<Integer> {
 			System.out.println(tmp.getInfo() + " ");
 			tmp = tmp.getNext();
 		}
+	}
+
+	@Override
+	public IteradorLista iterator() {
+
+		return new IteradorLista();
 	}
 
 }

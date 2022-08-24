@@ -1,6 +1,7 @@
-package ej3;
+package ej4;
 
 public class Node {
+
 	private Integer info;
 	private Node next;
 
@@ -29,5 +30,4 @@ public class Node {
 	public void setInfo(Integer info) {
 		this.info = info;
 	}
-
 }

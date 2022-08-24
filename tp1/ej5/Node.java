@@ -1,4 +1,4 @@
-package ej3;
+package ej5;
 
 public class Node {
 	private Integer info;

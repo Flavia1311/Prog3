@@ -1,17 +1,17 @@
-package ProgramacionIII.tp1;
-
-import java.util.Iterator;
+package ej3;
 
 public class main {
- public static void main(String[] args) {
-	MySimpleLinkedList lista = new MySimpleLinkedList();
-	lista.insertFront (20);
-	lista.insertFront (10);
-	lista.insertLast (30);
+	public static void main(String[] args) {
+		Pila listaPila = new Pila();
+
+		listaPila.push(22);
+		listaPila.push(30);
+		listaPila.push(40);
 	
-	Iterator <Integer> it = lista.iterator();
-	while (it.hasNext()) {
-		System.out.println(it.next());
-	}
+
+	
+
+	System.out.println(listaPila.top());
+	listaPila.printPila();
 }
 }

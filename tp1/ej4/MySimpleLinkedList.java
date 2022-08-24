@@ -1,11 +1,9 @@
-package ej3;
+package ej4;
 
 import java.util.Iterator;
 
-import ProgramacionIII.tp1.MyIterator;
-import ProgramacionIII.tp1.Node;
 
-public class MySimpleLinkedList implements Iterable<Integer> {
+public class MySimpleLinkedList {
 
 	private Node first;
 	private int size;
@@ -109,4 +107,23 @@ public class MySimpleLinkedList implements Iterable<Integer> {
 		}
 	}
 
+	public int indexOf(Integer info) {
+
+		Node tmp = new Node();
+		tmp = first;
+		int index = 0;
+		while (tmp != null) {
+
+			if (tmp.getInfo().equals(info))
+				return index;
+
+			else {
+				index++;
+				tmp = tmp.getNext();
+
+			}
+
+		}
+		return -1;
+	}
 }
